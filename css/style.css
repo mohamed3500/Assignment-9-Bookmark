@@ -1,0 +1,92 @@
+/* -----------------Global----------------- */
+
+body {
+    font-family: "PT Sans Caption", sans-serif;
+    background-color: #F7ECDE;
+}
+
+/* -----------------Header----------------- */
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+h1::before {
+    content: "";
+    background-color: #FEC260;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 65%;
+    z-index: -1;
+    transition: top 350ms;
+}
+
+h1:hover::before {
+    top: 35%;
+}
+
+/* -----------------Bookmark-Form----------------- */
+
+.bookmark-form h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #0c2e16, #dad064);
+    background-clip: text;
+    color: transparent;
+}
+
+.bookmark-form .container {
+    border-top: 2px dotted #000;
+    border-bottom: 2px dotted #000;
+}
+
+.form-body button {
+    display: block;
+    margin: auto;
+}
+
+.form-custom:focus {
+    border-color: #D99C39;
+    box-shadow: 0 0 0 4px rgb(250, 222, 180);
+}
+
+.form-body .btn-submit {
+    background-color: #d1512d;
+    border: 1px solid #d1512d;
+    color: #fff;
+}
+
+.form-body .btn-submit:hover {
+    background-color: #bb4120;
+    border-color: #a03315;
+}
+
+/* -----------------Bookmarks-Table----------------- */
+
+.bookmarks-table #tableContent .btn-visit {
+    color: #fff;
+    background-color: #9eb23b;
+    border: 1px solid #9eb23b;
+}
+
+.bookmarks-table #tableContent .btn-visit:hover {
+    background-color: #8a9e23;
+    border-color: #6e8018;
+}
+
+.bookmarks-table #tableContent .btn-delete {
+    color: #fff;
+    background-color: #eb1d36;
+    border: 1px solid #eb1d36;
+}
+
+.bookmarks-table #tableContent .btn-delete:hover {
+    background-color: #d30820;
+    border-color: #ba081d;
+}

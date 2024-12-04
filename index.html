@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/book-bookmark.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="text-center my-5">Bookmarker</h1>
+        </div>
+    </header>
+    <main>
+        <section class="bookmark-form">
+            <div class="container">
+                <h2 class="text-center py-4">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="form-body">
+                    <label for="site-name" class="py-2 fw-semibold"><i class="fa-solid fa-book-bookmark"></i> Site
+                        Name</label>
+                    <input placeholder="Bookmark Name" type="text" name="site-name" id="site-name"
+                        class="form-control form-custom" oninput="validateInputs('name-alert',this)" autocomplete="off">
+                    <p class="d-none alert alert-danger" id="name-alert">Site name must contain at least 3 characters
+                    </p>
+                    <label class="py-2 fw-semibold" for="site-url"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input placeholder="Website URL" type="text" name="site-url" id="site-url"
+                        class="form-control form-custom" oninput="validateInputs('url-alert',this)" autocomplete="off">
+                    <p class="d-none alert alert-danger" id="url-alert">Site URL must be a valid one</p>
+                    <button class="btn btn-submit my-4 px-5" id="submit-btn">Sumbit</button>
+                </div>
+            </div>
+        </section>
+        <section class="bookmarks-table">
+            <div class="container">
+                <table class="table mt-4 text-center bg-light">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize">Website Name</th>
+                            <th class="text-capitalize">Visit</th>
+                            <th class="text-capitalize">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContent">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
